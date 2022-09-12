@@ -18,4 +18,4 @@ app.add_middleware(
 
 @app.get("/", tags=["root"])
 async def read_root() -> dict:
-	return {"message": "Welcome to the best album birthday generator in the internet!"}
+	return {"message": "Welcome to the best album birthday generator on the internet!"}
