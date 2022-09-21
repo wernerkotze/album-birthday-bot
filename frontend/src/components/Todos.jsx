@@ -24,7 +24,7 @@ const TodosContext = React.createContext({
 export default function Todos() {
     const [todos, setTodos] = useState([])
     const fetchTodos = async () => {
-        const response = await fetch("http://localhost:8000/todo")
+        const response = await fetch("http://localhost:8000/artists")
         const todos = await response.json()
         setTodos(todos.data)
     }
@@ -37,7 +37,7 @@ export default function Todos() {
       <TodosContext.Provider value={{todos, fetchTodos}}>
         <Stack spacing={5}>
           {todos.map((todo) => (
-            <b>{todo.item}</b>
+            <b>{todo.name}</b>
           ))}
         </Stack>
       </TodosContext.Provider>
